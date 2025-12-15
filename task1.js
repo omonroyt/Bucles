@@ -1,3 +1,7 @@
-// Refer to Task 1 in your Instructions to complete this task
-const prompt = require("prompt-sync")();
-const name = prompt("Ingresa tu nombre");
+
+let nums= Array.from({ length: 105 })
+for(let i=0; i < 105; i++){
+    nums[i] = i +  1
+    console.log(nums[i]);
+    
+}

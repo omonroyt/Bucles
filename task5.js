@@ -1,5 +1,26 @@
-// Refer to Task 5 in your Instructions to complete this task
+const prompt = require("prompt-sync")();
+const cantidad = Number (prompt("Ingresa la cantidad de números que quieres que se generen!: ")) ;
 
-for (let i = 0; i < 1; i++) {
-    console.log("This is Task Five!");
-  };
+let nums= Array.from({ length: cantidad })
+for(let i=0; i < cantidad; i++){
+    nums[i] = i +  1
+    if(nums[i]%3===0 && nums[i]%5===0 && nums[i]%7===0){
+      console.log("FizzBuzzWoof");
+    } else{
+      if(nums[i]%3===0 && nums[i]%5===0){
+        console.log("FizzBuzz");
+    } else {
+      if(nums[i]%3===0){
+        console.log("Fizz");
+      } 
+      else if(nums[i]%5===0){
+        console.log("Buzz");
+      } else if(nums[i]%7===0){
+        console.log("Woof");
+      }
+      else{
+      console.log(nums[i]);
+    }
+    }
+    } 
+}
